@@ -12,14 +12,8 @@ int main()
 		c=0;
 		if(a%b == 0){
 			cout<<0<<"\n";
-		}else if(a<b){
-			cout<<b-a<<"\n";
 		}else{
-			while(a%b != 0){
-				c++;
-				a++;
-			}
-			cout<<c<<"\n";	
+			cout<<b-a%b<<"\n";
 		}
 
 		
