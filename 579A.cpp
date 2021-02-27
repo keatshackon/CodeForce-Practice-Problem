@@ -27,38 +27,17 @@ int main() {
     
     ll q,x,y,z,i,k,l,m,t,r,d,n,a,b,c;
 
+    
     cin>>t;
-    while(t--){ 
-        int cnt = 0;
-        int a = 0;
-        int b = 0;
-        string s;
-        cin>>s; 
-        int j = s.length()-1;
-        l = -1;
-        k = -2;
-        for(int i = 0;i < s.length();i++){
-            if(a == 0 and s[i] == '1'){
-                l = i;
-                a = 1; 
-            }
-            if(b == 0  and s[(j-i)] == '1'){
-                k = j-i;
-                b = 1;
-            }
-
+    int cnt  = 0;
+    while(t){
+        if(t & 1 == 1){
+            cnt++;
         }
-
-        // cout<<l<<" "<<k<<"\n";
-
-
-        for(int i = l;i <= k;i++){
-            if(s[i] == '0'){
-                cnt++;
-            }
-        }
-
-        cout<<cnt<<"\n";
+        t = t >> 1;
     }
+
+    cout<<cnt;
+
     return 0;
 }
